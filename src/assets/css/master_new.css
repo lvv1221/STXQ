@@ -2850,9 +2850,33 @@ article{
   box-sizing: border-box;
  }
  .studAnswerDet .itemBox:nth-of-type(3) .itemBox-cont {
-  height: 424px;
-   overflow-y: auto;
+  height: 382px;
+  overflow-y: auto;
  }
+/*@media only screen and (max-device-height: 600px) {
+  .studAnswerDet .itemBox:nth-of-type(3) .itemBox-cont {
+    height: 82px;
+    overflow-y: auto;
+  }
+}*/
+@media only screen and (max-device-height: 800px) {
+  .studAnswerDet .itemBox:nth-of-type(3) .itemBox-cont {
+    height: 282px;
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-device-height: 768px) {
+  .studAnswerDet .itemBox:nth-of-type(3) .itemBox-cont {
+    height: 250px;
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-device-height: 720px) {
+  .studAnswerDet .itemBox:nth-of-type(3) .itemBox-cont {
+    height: 202px;
+    overflow-y: auto;
+  }
+}
  .studAnswerDet .itemBox:nth-of-type(1) {
    margin-right: 0;
  }
@@ -2940,43 +2964,45 @@ article{
   font-size: 14px;
   color: #7d8b98;
 }
-.studAnswerDet .itemBox #noAnswerList {
+.studAnswerDet .itemBox #noAnswerList,  .studAnswerDet .itemBox #tableHead{
   padding: 20px;
+  -webkit-user-select: none;
 }
-.studAnswerDet .itemBox #noAnswerList table {
+.studAnswerDet .itemBox #noAnswerList table, .studAnswerDet .itemBox #tableHead table {
   width: 100%;
   table-layout: fixed;
   color: #646f85;
 }
 
-.studAnswerDet .itemBox #noAnswerList table th {
+.studAnswerDet .itemBox #noAnswerList table th,  .studAnswerDet .itemBox #tableHead table th{
   font-weight: bold;
   font-size: 14px;
 }
 
-.studAnswerDet .itemBox #noAnswerList table th:not(:first-child) {
+.studAnswerDet .itemBox #noAnswerList table th:not(:first-child), .studAnswerDet .itemBox #tableHead table th:not(:first-child) {
   text-align: center;
 }
 
-.studAnswerDet .itemBox #noAnswerList table tr td:nth-of-type(2n) {
+.studAnswerDet .itemBox #noAnswerList table tr td:nth-of-type(2n), .studAnswerDet .itemBox #tableHead table tr td:nth-of-type(2n) {
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.studAnswerDet .itemBox #noAnswerList table tr td:nth-of-type(3n) {
+.studAnswerDet .itemBox #noAnswerList table tr td:nth-of-type(3n), .studAnswerDet .itemBox #tableHead table tr td:nth-of-type(3n) {
   position: relative;
 }
 
-.studAnswerDet .itemBox #noAnswerList table td {
+.studAnswerDet .itemBox #noAnswerList table td, .studAnswerDet .itemBox #tableHead table td {
   height: 38px;
 }
 
-.studAnswerDet .itemBox #noAnswerList table td span {
+.studAnswerDet .itemBox #noAnswerList table td span,  .studAnswerDet .itemBox #tableHead table td span{
   display: inline-block;
   width: 52px;
   height: 24px;
+  margin-right: 5px;
   line-height: 24px;
   text-align: center;
   border: 1px solid #e4e6ea;
@@ -2986,7 +3012,7 @@ article{
   color: #646f85;
   background-color: #fff;
 }
-.studAnswerDet .itemBox #noAnswerList table td a.more {
+.studAnswerDet .itemBox #noAnswerList table td a.more,  .studAnswerDet .itemBox #tableHead table td a.more{
   display: inline-block;
   font-size: 14px;
   color: #646f85;
@@ -2997,21 +3023,22 @@ article{
   width: 44px;
   cursor: pointer;
 }
-.studAnswerDet .itemBox #noAnswerList table td .morelist {
+.studAnswerDet .itemBox #noAnswerList table td .morelist,  .studAnswerDet .itemBox #tableHead table td .morelist{
   display: none;
   position: absolute;
   top: 32px;
   right: 2px;
-  width: 427px;
+  max-width: 370px;
   box-sizing: border-box;
-  padding: 0 10px 10px 10px;
+  padding: 0 5px 10px 10px;
   background: rgba(27, 60, 95, 0.9);
   box-shadow: 0 0 5px rgba(49, 79, 111, 0.5);
   border-radius: 3px 3px 3px 3px;
   background-clip: padding-box;
   z-index: 9;
+  font-size: 0;
 }
-.studAnswerDet .itemBox #noAnswerList table td .morelist:before {
+.studAnswerDet .itemBox #noAnswerList table td .morelist:before,  .studAnswerDet .itemBox #tableHead table td .morelist:before{
   content: "";
   display: block;
   position: absolute;
@@ -3021,7 +3048,7 @@ article{
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
-.studAnswerDet .itemBox #noAnswerList table td .morelist span {
+.studAnswerDet .itemBox #noAnswerList table td .morelist span, .studAnswerDet .itemBox #tableHead table td .morelist span {
   margin-top: 10px;
 }
 .studAnswerDet .itemBox #noAnswerList .nodata {
@@ -3031,4 +3058,128 @@ article{
   font-size: 18px;
   color: #7d8b98;
 }
+
  /* add 20171122 end */
+.pop-title-center {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+}
+.pop-title .back {
+  background: url("../images/arrow-left.png") no-repeat center left;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.respond-navDet {
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+.respond-navDet .btnBox {
+  width: 668px;
+  margin: 23px auto;
+}
+.respond-navDet .option-box a:first-child {
+  margin-left: 0;
+}
+.respond-navDet .btnBox .btn-blue {
+  margin-top: 14px;
+}
+.respond-navDet .det-img {
+  width: auto;
+  height: auto;
+}
+.respond-navDet .imglist {
+  width: 668px;
+  height: 105px;
+  overflow: hidden;
+  overflow-x: auto;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+.respond-navDet .imglist li {
+  display: inline-block;
+  position: relative;
+  width: 66px;
+  height: 80px;
+  border-radius: 6px 6px 6px 6px;
+  background-clip: padding-box;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+.respond-navDet .imglist li:first-child {
+  margin-left: 0;
+}
+.respond-navDet .imglist li:hover,
+.respond-navDet .imglist li.cur  {
+  border: 3px solid #20a5ff;
+}
+.respond-navDet .imglist li:hover:before,
+.respond-navDet .imglist li.cur:before  {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #20a5ff;
+  position: absolute;
+  top: 74px;
+  left: 22px;
+}
+.respond-navDet .imglist li img {
+  width: 60px;
+  height: 74px;
+  border-radius: 3px 3px 3px 3px;
+  background-clip: padding-box;
+}
+/* add 20171122 end */
+
+#noAnswerList .sort, #tableHead .sort{
+  vertical-align: middle;
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  background: url("../images/icon_sort.png") no-repeat -1px -1px;
+}
+#noAnswerList .sortUp, #tableHead .sortUp {
+  vertical-align: middle;
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  background: url("../images/icon_sort2.png") no-repeat -42px -1px;
+}
+#noAnswerList .sortDown,  #tableHead .sortDown{
+  vertical-align: middle;
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  background: url("../images/icon_sort2.png") no-repeat -20px -1px;
+}
+
+/*--滚动条样式自定义开始--*/
+::-webkit-scrollbar{
+  height:8px;
+  width:8px;
+  border-radius:6px;
+}
+::-webkit-scrollbar-thumb{
+  background-clip:padding-box;
+  background-color:#fff;
+  min-height:28px;
+  padding-top:100px;
+  border-radius:3px;
+  border:1px solid #b4bcc3;
+  cursor:pointer;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color:#dfe4e8;
+}
+::-webkit-scrollbar-track:vertical{
+  border-width:0;
+}
+::-webkit-scrollbar-thumb:active{
+  background-color:#fff;
+}
+/*--滚动条样式自定义结束--*/
